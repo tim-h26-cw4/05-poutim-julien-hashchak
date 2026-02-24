@@ -5,12 +5,12 @@ export default class Chef {
     //variables globales
     this.element = element;
     this.menu = [];
-    this.container = document.querySelectorAll('.button-secondary');
+    this.container = this.element.querySelectorAll('.button-secondary');
 
     this.init();
   }
   init() {
-    const poutines = this.element.querySelectorAll('.button');
+    const poutines = this.element.querySelectorAll('.poutine');
 
     for (let i = 0; i < poutines.length; i++) {
       // mettre instance (bien faire le push...)
