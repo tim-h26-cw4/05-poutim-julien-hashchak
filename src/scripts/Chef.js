@@ -27,5 +27,14 @@ export default class Chef {
       }
     }
   }
-  sendOrder() {}
+  sendOrder() {
+    // compte le nombre de poutines créées:
+    const nombrePoutines = this.element.querySelectorAll('button.is-active');
+    console.log(Number(nombrePoutines.length));
+
+    //créer le p
+    const p = document.createElement('p');
+    p.textContent = `Nombre total de poutine(s) :  ${nombrePoutines}`;
+    this.container.appendChild(p);
+  }
 }
