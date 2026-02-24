@@ -10,12 +10,12 @@ export default class Chef {
     this.init();
   }
   init() {
-    const poutines = this.element.querySelectorAll('.poutine');
+    const poutines = this.element.querySelectorAll('.button');
 
     for (let i = 0; i < poutines.length; i++) {
-      const poutine = poutines[i];
-      // mettre instance
+      // mettre instance (bien faire le push...)
 
+      const poutine = poutines[i];
       const instance = new Poutine(poutine);
       this.menu.push(instance);
 
