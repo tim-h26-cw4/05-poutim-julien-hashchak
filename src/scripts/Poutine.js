@@ -19,25 +19,16 @@ export default class Poutine {
       type.classList.remove('is-active');
       boutonClick.classList.add('is-active');
     }
-    if ('poulet' in boutonClick.dataset) {
-      console.log('adsg');
-    }
-    this.selectType = this.element.innerText;
+    this.selectType = boutonClick.innerText;
+    console.log(this.selectType);
     this.updatePhoto();
   }
 
-  updatePhoto(event) {
+  updatePhoto() {
     const image = this.element.querySelector('img');
     image.classList.add('is-active');
+    image.src = `../assets/images/${this.selectType}.png`;
 
-    //for (let i = 0; i < this.types.length; i++) {
-    //  const type = this.types[i];
-    //  console.log(type);
-
-    // if (type.dataset.poulet) {
-    //   image.src = '../assets/images/poulet.png';
-    //   console.log('ajdgs');
-    // }
-    // }
+    //image.src = '../assets/images/saucisse.png';
   }
 }
