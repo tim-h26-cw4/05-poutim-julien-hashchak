@@ -19,14 +19,14 @@ export default class Poutine {
       type.classList.remove('is-active');
       boutonClick.classList.add('is-active');
     }
-    this.selectType = boutonClick.innerText;
-    console.log(this.selectType);
+    this.selectedType = boutonClick.innerText;
+    console.log(this.selectedType);
     this.updatePhoto();
   }
 
   updatePhoto() {
     const image = this.element.querySelector('img');
     image.classList.add('is-active');
-    image.src = `../assets/images/${this.selectType}.png`;
+    image.src = `../assets/images/${this.selectedType}.png`;
   }
 }

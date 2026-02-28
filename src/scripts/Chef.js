@@ -28,13 +28,16 @@ export default class Chef {
     }
   }
   sendOrder() {
-    // compte le nombre de poutines créées:
+    // compte le nombre de poutines créées: 
+    
     const nombrePoutines = this.element.querySelectorAll('button.is-active');
-    console.log(Number(nombrePoutines.length));
-
+    const totalPoutines = Number(nombrePoutines.length);
+    
     //créer le p
+    const texte = this.element.querySelector(".chef__order");
+    texte.innerHTML="";
     const p = document.createElement('p');
-    p.textContent = `Nombre total de poutine(s) :  ${nombrePoutines}`;
-    this.container.appendChild(p);
+    p.textContent = `Nombre total de poutine(s) :  ${totalPoutines}`;
+    texte.appendChild(p);
   }
 }
